@@ -1,0 +1,14 @@
+{
+  "name": "꼬들 — 매일 한 판, 한글 단어 퍼즐",
+  "short_name": "꼬들",
+  "description": "여섯 번의 기회로 오늘의 두 글자 한글 단어를 맞혀보세요.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#121213",
+  "theme_color": "#121213",
+  "lang": "ko",
+  "icons": [
+    { "src": "assets/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
