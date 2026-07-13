@@ -61,7 +61,7 @@ export function recordResult(puzzleNum, won, tries) {
 }
 
 export function loadPrefs() {
-  return read(KEY_PREFS, { theme: 'dark', contrast: false, seenHelp: false });
+  return read(KEY_PREFS, { contrast: false, seenHelp: false });
 }
 export function savePrefs(prefs) {
   write(KEY_PREFS, prefs);

@@ -14,11 +14,7 @@ const FLIP_STAGGER = 200;     // 타일 간 지연
 const WIN_MESSAGES = ['천재!', '대단해요!', '굉장해요!', '멋져요!', '잘했어요!', '휴, 아슬아슬!'];
 
 // ── 상태 ──────────────────────────────────────────
-const firstVisit = localStorage.getItem('kkodle_prefs_v1') === null;
 const prefs = loadPrefs();
-if (firstVisit && window.matchMedia?.('(prefers-color-scheme: light)').matches) {
-  prefs.theme = 'light';
-}
 const today = getTodayAnswer();
 let game = createGame(today.jamo, today.num);
 let shiftOn = false;
@@ -43,11 +39,9 @@ const $keyboard = document.getElementById('keyboard');
 const $preview = document.getElementById('preview');
 const $toastWrap = document.getElementById('toast-wrap');
 
-// ── 테마 ──────────────────────────────────────────
+// ── 고대비 설정 ───────────────────────────────────
 function applyPrefs() {
-  document.documentElement.dataset.theme = prefs.theme;
   document.documentElement.dataset.contrast = prefs.contrast ? 'high' : '';
-  document.getElementById('btn-theme').textContent = prefs.theme === 'dark' ? '☀' : '🌙';
 }
 applyPrefs();
 
@@ -410,13 +404,6 @@ document.getElementById('btn-share').addEventListener('click', async () => {
     }
   }
   toast((await copyText(text)) ? '결과가 복사되었어요 📋' : '복사에 실패했어요');
-});
-
-// ── 테마 토글 ─────────────────────────────────────
-document.getElementById('btn-theme').addEventListener('click', () => {
-  prefs.theme = prefs.theme === 'dark' ? 'light' : 'dark';
-  savePrefs(prefs);
-  applyPrefs();
 });
 
 // ── 고대비(색약) 모드 ─────────────────────────────

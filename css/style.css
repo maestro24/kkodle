@@ -1,24 +1,5 @@
-/* 꼬들 v2 — 디자인 시스템: 변수 기반 테마, 마이크로 인터랙션 */
+/* 꼬들 v2 — 디자인 시스템: 라이트 테마 전용, 마이크로 인터랙션 */
 :root {
-  --bg: #121213;
-  --bg-elev: #1e1e1f;
-  --bg-key-hover: #2c2c2e;
-  --text: #f8f8f8;
-  --text-dim: #9a9a9c;
-  --border: #3a3a3c;
-  --border-active: #6e6e70;
-  --key-bg: #6e7073;
-  --key-text: #ffffff;
-  --correct: #43a047;
-  --present: #d4a72c;
-  --absent: #2f2f31;
-  --accent: #43a047;
-  --modal-bg: #1c1c1e;
-  --shadow: rgba(0, 0, 0, 0.55);
-  --tile-size: min(13vw, 58px);
-  --radius: 8px;
-}
-:root[data-theme='light'] {
   --bg: #fbfbfb;
   --bg-elev: #f0f0f1;
   --bg-key-hover: #e2e4e8;
@@ -28,9 +9,14 @@
   --border-active: #8f9296;
   --key-bg: #d6d9dd;
   --key-text: #1a1a1b;
+  --correct: #43a047;
+  --present: #d4a72c;
   --absent: #9aa0a6;
+  --accent: #43a047;
   --modal-bg: #ffffff;
   --shadow: rgba(0, 0, 0, 0.22);
+  --tile-size: min(13vw, 58px);
+  --radius: 8px;
 }
 :root[data-contrast='high'] {
   --correct: #f5793a;
@@ -151,8 +137,7 @@ button { font-family: inherit; }
 .tile.filled { border-color: var(--border-active); animation: pop 0.12s ease; }
 .tile.correct { background: var(--correct); border-color: var(--correct); color: #fff; }
 .tile.present { background: var(--present); border-color: var(--present); color: #fff; }
-.tile.absent { background: var(--absent); border-color: var(--absent); color: #cfcfd1; }
-:root[data-theme='light'] .tile.absent { color: #fff; }
+.tile.absent { background: var(--absent); border-color: var(--absent); color: #fff; }
 .row.shake { animation: shake 0.5s; }
 .tile.dance { animation: dance 0.5s ease both; }
 
@@ -212,8 +197,7 @@ button { font-family: inherit; }
 .key:active { transform: translateY(2px) scale(0.97); box-shadow: none; }
 .key.correct { background: var(--correct); color: #fff; }
 .key.present { background: var(--present); color: #fff; }
-.key.absent { background: var(--absent); color: #8a8a8c; box-shadow: none; }
-:root[data-theme='light'] .key.absent { color: #e6e6e6; }
+.key.absent { background: var(--absent); color: #e6e6e6; box-shadow: none; }
 .key.shift-on { background: var(--text); color: var(--bg); }
 
 /* ── 토스트 ── */

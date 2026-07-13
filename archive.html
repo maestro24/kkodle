@@ -12,7 +12,7 @@
   <meta property="og:url" content="https://maestro24.github.io/kkodle/archive.html" />
   <meta property="og:image" content="https://maestro24.github.io/kkodle/assets/og-image.png" />
   <meta property="og:locale" content="ko_KR" />
-  <meta name="theme-color" content="#121213" />
+  <meta name="theme-color" content="#fbfbfb" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -42,9 +42,6 @@
   </div>
   <script type="module">
     import { getPuzzleNumber, getAnswerForPuzzle } from './js/words.js';
-    import { loadPrefs } from './js/storage.js';
-
-    document.documentElement.dataset.theme = loadPrefs().theme;
 
     const todayNum = getPuzzleNumber();
     const $list = document.getElementById('archive-list');
