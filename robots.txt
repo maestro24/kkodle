@@ -2,6 +2,10 @@
 User-agent: *
 Allow: /
 
+# 네이버 검색 크롤러 명시 허용
+User-agent: Yeti
+Allow: /
+
 # AI 검색 크롤러 명시 허용
 User-agent: GPTBot
 Allow: /
